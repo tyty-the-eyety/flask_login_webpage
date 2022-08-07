@@ -36,7 +36,7 @@ def  check_usr_pwd(usr , passwd) :
     try: 
         conn = sqlite3.connect("sqlite.db")
         cur = conn.cursor()
-        i = cur.execute("SELECT COUNT(*) FROM USRNAMES WHERE USERNAME = 'usr' AND PASSWD = 'passwd'").fetchall()
+        i = cur.execute("SELECT COUNT(*) FROM USERS WHERE USERNAME = 'usr' AND PASSWD = 'passwd'").fetchall()
         if len(i) == 1 :
             return True
         else:

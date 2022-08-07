@@ -7,10 +7,10 @@ print ("Opened database successfully");
 user = 'Tyron';
 passs = 'password';
 
-#conn.execute('INSERT INTO USRNAMES  (ID, USERNAME , PASSWD  ) VALUES(1 ,"Tyron" , "password")'  );
+conn.execute('INSERT INTO Users (ID, USERNAME , FIRSTNAME, LASTNAME, PASSWD, EMAIL  ) VALUES(1 ,"LouwEtienne","Etienne","Louw","password","louwetienne@gmail.com")'  );
 print ("Table inserted successfully");  
 cur = conn.cursor()
-cur.execute("SELECT * FROM USRNAMES")
+cur.execute("SELECT * FROM USERS")
 
 # Print everything from a table
 rows = cur.fetchall()
